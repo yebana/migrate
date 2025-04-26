@@ -96,11 +96,11 @@ with tab1:
         if num_months > 0 and total_capacity >= 0:
             result = goal_seek(formula, target_value)
             if result is not None:
-                st.success(f'Required monthly migration rate: {result:.2f} TB/month')
-                st.write(f'Total capacity: {total_capacity} TB')
-                st.write(f'Target remaining capacity: {target_value} TB')
-                st.write(f'Number of months: {num_months}')
-                st.write(f'Monthly rate × months = {result * num_months:.2f} TB')
+                st.info(f'Required monthly migration rate: {result:.2f} TB/month')
+                #st.write(f'Total capacity: {total_capacity} TB')
+                #st.write(f'Target remaining capacity: {target_value} TB')
+                st.info(f'Number of months to finish migration: {num_months}')
+                #st.write(f'Monthly rate × months = {result * num_months:.2f} TB')
                 
                 # Generate data for the line chart with actual months
                 months = []
